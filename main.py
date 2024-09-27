@@ -5,6 +5,8 @@ import os
 import shutil
 from time import sleep
 
+# pyinstaller --noconsole --exclude numpy --exclude pandas --exclude cv2 --exclude sklearn --exclude youtube-dl --exclude PyQt6 main.py
+
 terminate = False
 window = tk.Tk()
 appdata = f"{os.getenv('LOCALAPPDATA')}\\autobracket_data\\"
@@ -67,14 +69,6 @@ def autobracket():
                 pyautogui.press('left')
             sleep(delay)
 
-        elif keyboard.is_pressed("'"):
-            pyautogui.typewrite("'")
-            if keyboard.is_pressed('shift'):
-                pyautogui.keyUp('shift')
-                pyautogui.press('left')
-            else:
-                pyautogui.press('left')
-            sleep(delay)
         if terminate == True:
             break
         window.update()
