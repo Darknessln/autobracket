@@ -5,7 +5,6 @@ import os
 import shutil
 from time import sleep
 
-# pyinstaller --noconsole --exclude numpy --exclude pandas --exclude cv2 --exclude sklearn --exclude youtube-dl --exclude PyQt6 main.py
 
 terminate = False
 window = tk.Tk()
